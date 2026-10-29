@@ -416,7 +416,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-iteBlue-400 font-semibold text-xs tracking-widest uppercase">Student Feedback</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-2">What Our Alumni Say</h2>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white mt-2">What Our Students Say</h2>
                 <p class="text-slate-400 text-sm mt-2">Real testimonials from graduates who built successful careers with us.</p>
             </div>
 
@@ -529,30 +529,30 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
+                <!-- Contact Form with WhatsApp Link -->
                 <div class="lg:col-span-7 glass-card p-8 sm:p-10 rounded-3xl border border-neutral-800">
                     <h3 class="font-heading text-xl font-bold text-white mb-6">Send an Admission Inquiry</h3>
-                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                    <form onsubmit="handleContactWhatsApp(event)" class="space-y-4">
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Full Name</label>
-                                <input type="text" required placeholder="e.g. Ali Raza" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-iteBlue-500">
+                                <input type="text" id="inquiryName" required placeholder="e.g. Ali Raza" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-iteBlue-500">
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Phone / WhatsApp Number</label>
-                                <input type="tel" required placeholder="+92 307 9649691" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-iteBlue-500">
+                                <input type="tel" id="inquiryPhone" required placeholder="+92 307 9649691" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-iteBlue-500">
                             </div>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Email Address</label>
-                            <input type="email" required placeholder="Instituteoftechexcellence@gmail.com" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-iteBlue-500">
+                            <input type="email" id="inquiryEmail" required placeholder="Instituteoftechexcellence@gmail.com" class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-iteBlue-500">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-400 uppercase mb-2">Message or Inquiry Details</label>
-                            <textarea rows="4" required placeholder="I want to inquire about diploma admissions..." class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-iteBlue-500"></textarea>
+                            <textarea id="inquiryMsg" rows="4" required placeholder="I want to inquire about diploma admissions..." class="w-full bg-neutral-900 border border-neutral-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-iteBlue-500"></textarea>
                         </div>
-                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-iteBlue-500 to-iteBlue-600 text-white font-heading font-bold text-sm hover:shadow-lg hover:shadow-iteBlue-500/20 transition-all">
-                            Submit Inquiry
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-heading font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Submit & Send on WhatsApp
                         </button>
                     </form>
                 </div>
@@ -609,7 +609,7 @@
 
             <div class="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
                 <p>&copy; 2026 Institute of Tech Excellence. All Rights Reserved. Founder & Director: Arsam Usman</p>
-                <p>Designed for Professional Vercel Deployment</p>
+                <p>Designed for Institute of Tech Excellence</p>
             </div>
         </div>
     </footer>
@@ -666,28 +666,28 @@
 
     <!-- JavaScript Data & Logic -->
     <script>
-        // Exactly 52 User-Specified Professional Courses with structured pic1.jpg to pic52.jpg paths
+        // Exactly 52 User-Specified Professional Courses with Updated Durations
         const coursesData = [
             { id: 1, title: "Microsoft Office", cat: "IT", duration: "2 Months", pic: "pic1.jpg" },
             { id: 2, title: "Graphic Designing", cat: "Design", duration: "3 Months", pic: "pic2.jpg" },
             { id: 3, title: "Affiliate Marketing", cat: "Marketing", duration: "2 Months", pic: "pic3.jpg" },
             { id: 4, title: "Web Designing & Development", cat: "IT", duration: "4 Months", pic: "pic4.jpg" },
             { id: 5, title: "Social Media Marketing", cat: "Marketing", duration: "2 Months", pic: "pic5.jpg" },
-            { id: 6, title: "E-Commerce", cat: "Marketing", duration: "3 Months", pic: "pic6.jpg" },
-            { id: 7, title: "Digital Marketing", cat: "Marketing", duration: "3 Months", pic: "pic7.jpg" },
-            { id: 8, title: "SEO", cat: "Marketing", duration: "2 Months", pic: "pic8.jpg" },
-            { id: 9, title: "Facebook Marketplace", cat: "Marketing", duration: "1 Month", pic: "pic9.jpg" },
+            { id: 6, title: "E-Commerce", cat: "Marketing", duration: "6 Months", pic: "pic6.jpg" },
+            { id: 7, title: "Digital Marketing", cat: "Marketing", duration: "4 Months", pic: "pic7.jpg" },
+            { id: 8, title: "SEO", cat: "Marketing", duration: "6 Months", pic: "pic8.jpg" },
+            { id: 9, title: "Facebook Marketplace", cat: "Marketing", duration: "2 Months", pic: "pic9.jpg" },
             { id: 10, title: "Freelancing", cat: "IT", duration: "2 Months", pic: "pic10.jpg" },
             { id: 11, title: "Shopify", cat: "Marketing", duration: "2 Months", pic: "pic11.jpg" },
-            { id: 12, title: "Amazon", cat: "Marketing", duration: "3 Months", pic: "pic12.jpg" },
+            { id: 12, title: "Amazon", cat: "Marketing", duration: "6 Months", pic: "pic12.jpg" },
             { id: 13, title: "Professional Content Writing", cat: "IT", duration: "2 Months", pic: "pic13.jpg" },
             { id: 14, title: "Local SEO with WordPress", cat: "Marketing", duration: "2 Months", pic: "pic14.jpg" },
-            { id: 15, title: "Instagram Advertisement", cat: "Marketing", duration: "1 Month", pic: "pic15.jpg" },
+            { id: 15, title: "Instagram Advertisement", cat: "Marketing", duration: "2 Months", pic: "pic15.jpg" },
             { id: 16, title: "Cyber Security", cat: "Cloud", duration: "6 Months", pic: "pic16.jpg" },
-            { id: 17, title: "TikTok Marketing", cat: "Marketing", duration: "1 Month", pic: "pic17.jpg" },
-            { id: 18, title: "Advanced Digital Marketing", cat: "Marketing", duration: "4 Months", pic: "pic18.jpg" },
+            { id: 17, title: "TikTok Marketing", cat: "Marketing", duration: "2 Months", pic: "pic17.jpg" },
+            { id: 18, title: "Advanced Digital Marketing", cat: "Marketing", duration: "6 Months", pic: "pic18.jpg" },
             { id: 19, title: "Youtube Monetization", cat: "Marketing", duration: "2 Months", pic: "pic19.jpg" },
-            { id: 20, title: "Guest Posting", cat: "Marketing", duration: "1 Month", pic: "pic20.jpg" },
+            { id: 20, title: "Guest Posting", cat: "Marketing", duration: "2 Months", pic: "pic20.jpg" },
             { id: 21, title: "Spoken English", cat: "IT", duration: "2 Months", pic: "pic21.jpg" },
             { id: 22, title: "Daraz", cat: "Marketing", duration: "2 Months", pic: "pic22.jpg" },
             { id: 23, title: "Facebook Monetization", cat: "Marketing", duration: "2 Months", pic: "pic23.jpg" },
@@ -696,15 +696,15 @@
             { id: 26, title: "Instagram Dropshipping", cat: "Marketing", duration: "2 Months", pic: "pic26.jpg" },
             { id: 27, title: "Snapchat Branding", cat: "Marketing", duration: "1 Month", pic: "pic27.jpg" },
             { id: 28, title: "Youtube Ads", cat: "Marketing", duration: "2 Months", pic: "pic28.jpg" },
-            { id: 29, title: "SEO Specialist", cat: "Marketing", duration: "3 Months", pic: "pic29.jpg" },
+            { id: 29, title: "SEO Specialist", cat: "Marketing", duration: "6 Months", pic: "pic29.jpg" },
             { id: 30, title: "Advanced Facebook Ads", cat: "Marketing", duration: "2 Months", pic: "pic30.jpg" },
-            { id: 31, title: "Online Earning Strategy", cat: "IT", duration: "1 Month", pic: "pic31.jpg" },
-            { id: 32, title: "SEO Analyst", cat: "Marketing", duration: "3 Months", pic: "pic32.jpg" },
+            { id: 31, title: "Online Earning Strategy", cat: "IT", duration: "2 Months", pic: "pic31.jpg" },
+            { id: 32, title: "SEO Analyst", cat: "Marketing", duration: "6 Months", pic: "pic32.jpg" },
             { id: 33, title: "Amazon Merch", cat: "Marketing", duration: "2 Months", pic: "pic33.jpg" },
             { id: 34, title: "Amazon KDP", cat: "Marketing", duration: "2 Months", pic: "pic34.jpg" },
             { id: 35, title: "Amazon Virtual Assistant", cat: "Marketing", duration: "3 Months", pic: "pic35.jpg" },
             { id: 36, title: "AI For Beginner", cat: "AI", duration: "2 Months", pic: "pic36.jpg" },
-            { id: 37, title: "Advanced AI Course", cat: "AI", duration: "4 Months", pic: "pic37.jpg" },
+            { id: 37, title: "Advanced AI Course", cat: "AI", duration: "10 Months", pic: "pic37.jpg" },
             { id: 38, title: "Game Development", cat: "AI", duration: "6 Months", pic: "pic38.jpg" },
             { id: 39, title: "App Development", cat: "AI", duration: "5 Months", pic: "pic39.jpg" },
             { id: 40, title: "Facebook Automation", cat: "Marketing", duration: "2 Months", pic: "pic40.jpg" },
@@ -716,10 +716,10 @@
             { id: 46, title: "System Administration (MCSA/Linux)", cat: "Cloud", duration: "6 Months", pic: "pic46.jpg" },
             { id: 47, title: "CCNA Networking & Hardware", cat: "Cloud", duration: "4 Months", pic: "pic47.jpg" },
             { id: 48, title: "Ethical Hacking & Penetration Testing", cat: "Cloud", duration: "6 Months", pic: "pic48.jpg" },
-            { id: 49, title: "AI Agent & Prompt Engineering", cat: "AI", duration: "3 Months", pic: "pic49.jpg" },
+            { id: 49, title: "AI Agent & Prompt Engineering", cat: "AI", duration: "6 Months", pic: "pic49.jpg" },
             { id: 50, title: "Full Stack Web Engineering (MERN)", cat: "AI", duration: "6 Months", pic: "pic50.jpg" },
             { id: 51, title: "Advanced Python & Automation", cat: "AI", duration: "3 Months", pic: "pic51.jpg" },
-            { id: 52, title: "E-Commerce Management", cat: "Marketing", duration: "3 Months", pic: "pic52.jpg" }
+            { id: 52, title: "E-Commerce Management", cat: "Marketing", duration: "6 Months", pic: "pic52.jpg" }
         ];
 
         let cart = [];
@@ -902,10 +902,19 @@
             }, 3000);
         }
 
-        // Form Submission
-        function handleContactSubmit(e) {
+        // Handle Contact Form Submission to WhatsApp
+        function handleContactWhatsApp(e) {
             e.preventDefault();
-            showToast("Inquiry submitted! Our representative will contact you soon.");
+            const name = document.getElementById('inquiryName').value;
+            const phone = document.getElementById('inquiryPhone').value;
+            const email = document.getElementById('inquiryEmail').value;
+            const message = document.getElementById('inquiryMsg').value;
+
+            const whatsappMsg = `Hello Institute of Tech Excellence! %0A%0A*New Admission Inquiry:*%0A- *Name:* ${encodeURIComponent(name)}%0A- *Phone:* ${encodeURIComponent(phone)}%0A- *Email:* ${encodeURIComponent(email)}%0A- *Message:* ${encodeURIComponent(message)}`;
+            
+            const whatsappNum = "923079649691";
+            window.open(`https://wa.me/${whatsappNum}?text=${whatsappMsg}`, '_blank');
+            showToast("Redirecting to WhatsApp with your inquiry!");
             e.target.reset();
         }
 
